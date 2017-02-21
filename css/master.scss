@@ -1,0 +1,287 @@
+html{
+	background: #0f204d url("../img/stars.png") repeat top center;
+  z-index:0;
+	-moz-animation:move-twink-back 200s linear infinite;
+	-ms-animation:move-twink-back 200s linear infinite;
+	-webkit-animation:move-twink-back 200s linear infinite;
+	animation:move-twink-back 200s linear infinite;
+}
+
+.wrapper{
+
+	width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	.header{
+		width:100%;
+		height:260px;
+		background: url("../img/headerbg.gif") no-repeat;
+		background-size: cover;
+		background-position: center;
+		border: black solid 4px;
+		box-sizing: border-box;
+	}
+	.nav{
+		position: relative;
+		//justify-content: center;
+		align-items: center;
+		display: flex;
+		width: 100%;
+		background: #f9e02e;
+		font-family: SourceSansPro-Regular;
+		font-weight: bold;
+		text-transform:uppercase;
+		font-size: 24px;
+		height: 50px;
+		.navBtns{
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+			}
+		.navBtns:hover{
+			cursor: pointer;
+			color: #ee443c;
+		}
+			#homeLink{
+				padding-left: 80px;
+			}
+		.spacer{
+			font-size: 10px;
+			font-weight: normal;
+		}
+		#social{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			height: 35px;
+			width: 205px;
+			right:50px;
+			font-size: 45px;
+			div{
+				padding:0;
+			}
+			div:hover{
+				cursor: pointer;
+				color: #ee443c;
+			}
+		}
+	}
+	.content{
+		position: relative;
+		border: black solid 4px;
+		background: #ee443c;
+		width: 100%;
+		height: 600px;
+		box-sizing: border-box;
+		.topContent{
+			display: flex;
+			position: relative;
+			width: 100%;
+			height: 570px;
+			.leftContent{
+				position: relative;
+				width:60%;
+				height:100%;
+				.leftContent-top{
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width:100%;
+					height:75%;
+					.leftContent-top-img{
+						width:593px;
+						height:400px;
+						background: url("../img/toys1.jpg")  no-repeat;
+						background-position: center;
+						background-size: cover;
+						border: solid black 2px;
+					}
+				}
+				.leftContent-bottom{
+					position: relative;
+					display: flex;
+					width:100%;
+					height:25%;
+					.leftContent-bottom-left{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width:50%;
+						height:100%;
+						ul{
+							list-style-type: none;
+							padding-left: 0;
+							color: #f9e02e;
+							font-weight: bold;
+							font-size: 26px;
+							font-family: SourceSansPro-Regular;
+							//text-align: right;
+						}
+						.hoursLi{
+							font-size: 30px;
+							text-align: left;
+						}
+						.hourTable{
+							display:flex;
+							ul #days{
+								padding-right: 50px;
+							}
+							#times{
+									text-align: right;
+							}
+						}
+					}
+					.leftContent-bottom-right{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width:50%;
+						height:100%;
+						ul{
+							list-style-type: none;
+							padding-left: 0;
+							color: #f9e02e;
+							font-weight: bold;
+							font-size: 22px;
+							font-family: SourceSansPro-Regular;
+							text-align: center;
+							padding-bottom: 10px;
+						}
+						.nameLi{
+							font-size: 36px;
+							padding-bottom: 3px;
+							padding-top: 5px;
+						}
+					}
+				}
+
+			}
+			.rightContent{
+				position: relative;
+				width:40%;
+				height:100%;
+				.rightContent-top{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width:100%;
+					height:50%;
+					.storePic{
+						width: 391px;
+						height: 271px;
+						background: url("../img/storefront.jpg")  no-repeat;
+						background-position: center;
+						background-size: cover;
+						border: solid black 2px;
+					}
+				}
+				.rightContent-bottom{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width:100%;
+					height:50%;
+					.map{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border: solid black 2px;
+					}
+				}
+
+			}
+		}
+		.bottomContent{
+			height:30px;
+			width: 100%;
+
+		}
+	}
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?85718967');
+  src: url('../fonts/fontello.eot?85718967#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?85718967') format('woff2'),
+       url('../fonts/fontello.woff?85718967') format('woff'),
+       url('../fonts/fontello.ttf?85718967') format('truetype'),
+       url('../fonts/fontello.svg?85718967#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?85718967#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-gmail:before { content: '\e800'; } /* '' */
+.icon-youtube-squared:before { content: '\f166'; } /* '' */
+.icon-soundcloud:before { content: '\f1be'; } /* '' */
+.icon-facebook-squared:before { content: '\f30e'; } /* '' */
+.icon-instagram:before { content: '\f32d'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-mail-1:before { content: '\e802'; } /* '' */
+.icon-note-beamed:before { content: '\e803'; } /* '' */
