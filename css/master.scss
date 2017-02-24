@@ -1,87 +1,51 @@
-
-html{
-	background: #0f204d url("../img/stars.png") repeat top center;
-  z-index:0;
-	-moz-animation:move-twink-back 200s linear infinite;
-	-ms-animation:move-twink-back 200s linear infinite;
-	-webkit-animation:move-twink-back 200s linear infinite;
-	animation:move-twink-back 200s linear infinite;
+html,body{
+	height:100%;
+	width:100%;
+	overflow: hidden;
 }
 
+body{
+	margin-left: -85px;
+}
 
-.wrapper{
-
-	width: 1020px;
+.header{
+	//opacity: 0;
+	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	.header{
-		width:100%;
-		height:260px;
-		background: url("../img/headerbg.gif") no-repeat;
-		background-size: cover;
-		background-position: center;
-		border: black solid 4px;
-		box-sizing: border-box;
-	}
-	.nav{
+	top: -123px;
+	right: -152px;
+	width: 1045px;
+	height: 213px;
+	background: url(../img/headerbg_clr.png) no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	z-index: 5;
+}
+.wrapper{
+	position: relative;
+	width: 850px;
+	margin-top: 123px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 4;
+
+	#prePanel-Content{
+		margin-left: -11px;
 		position: relative;
-		//justify-content: center;
-		align-items: center;
-		display: flex;
 		width: 100%;
-		background: #f9e02e;
-		font-family: SourceSansPro-Regular;
-		font-weight: bold;
-		text-transform:uppercase;
-		font-size: 24px;
-		height: 50px;
-		.navBtns{
-				padding-left: 20px;
-				padding-right: 20px;
-				padding-top: 4px;
-				padding-bottom: 4px;
-			}
-		.navBtns:hover{
-			cursor: pointer;
-			color: #ee443c;
-		}
-			#homeLink{
-				padding-left: 80px;
-			}
-		.spacer{
-			font-size: 10px;
-			font-weight: normal;
-		}
-		#social{
-			display: flex;
-			align-items: center;
-			position: absolute;
-			height: 35px;
-			width: 205px;
-			right:50px;
-			font-size: 45px;
-			div{
-				padding:0;
-			}
-			div:hover{
-				cursor: pointer;
-				color: #ee443c;
-			}
-		}
+		height: 500px;
 	}
-	.content{
+	#panel-Content{
 		position: relative;
-		border: black solid 4px;
-		background: #ee443c;
-		width: 100%;
-		height: 600px;
-		box-sizing: border-box;
+		height: 500px;
+		top: -511px;
 		.topContent{
 			display: flex;
 			position: relative;
 			width: 100%;
-			height: 570px;
+			//height: 95%;
+			height: 99%;
 			.leftContent{
 				position: relative;
 				width:60%;
@@ -92,15 +56,16 @@ html{
 					align-items: center;
 					justify-content: center;
 					width:100%;
-					height:75%;
+					height:101%;
 					.leftContent-top-img{
-						width:593px;
-						height:400px;
+						width: 97%;
+						height: 97%;
+						border-radius: 5px;
 						background: url("../img/toys1.jpg")  no-repeat;
 						background-position: center;
 						background-size: cover;
 						border: solid black 2px;
-						box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+						//box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
 					}
 				}
 				.leftContent-bottom{
@@ -108,54 +73,38 @@ html{
 					display: flex;
 					width:100%;
 					height:25%;
-					text-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+					//text-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
 					.leftContent-bottom-left{
-						display: flex;
+						//display: flex;
+						display: none;
 						align-items: center;
 						justify-content: center;
 						width:50%;
 						height:100%;
-						ul{
-							list-style-type: none;
-							padding-left: 0;
-							color: #f9e02e;
-							font-weight: bold;
-							font-size: 26px;
-							font-family: SourceSansPro-Regular;
-							//text-align: right;
-						}
-						.hoursLi{
-							font-size: 30px;
-							text-align: left;
-						}
-						.hourTable{
-							display:flex;
-							ul #days{
-								padding-right: 50px;
-							}
-							#times{
-									text-align: right;
-							}
-						}
+
 					}
 					.leftContent-bottom-right{
-						display: flex;
+						//display: flex;
+						display: none;
 						align-items: center;
 						justify-content: center;
-						width:50%;
+						width:49%;
 						height:100%;
+						border: solid black 2px;
+						//box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+						box-sizing: border-box;
 						ul{
 							list-style-type: none;
 							padding-left: 0;
-							color: #f9e02e;
+							color: black;
 							font-weight: bold;
-							font-size: 22px;
+							font-size: 18px;
 							font-family: SourceSansPro-Regular;
 							text-align: center;
 							padding-bottom: 10px;
 						}
 						.nameLi{
-							font-size: 36px;
+							font-size: 25px;
 							padding-bottom: 3px;
 							padding-top: 5px;
 						}
@@ -172,15 +121,18 @@ html{
 					align-items: center;
 					justify-content: center;
 					width:100%;
-					height:50%;
+					height:40%;
 					.storePic{
-						width: 391px;
-						height: 271px;
+						border-radius: 5px;
+						margin-top: 6px;
+						margin-right: 6px;
+						width: 100%;
+						height: 98%;
 						background: url("../img/storefront.jpg")  no-repeat;
-						background-position: center;
+						background-position:top;
 						background-size: cover;
 						border: solid black 2px;
-						box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+						//box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
 					}
 				}
 				.rightContent-bottom{
@@ -188,24 +140,267 @@ html{
 					align-items: center;
 					justify-content: center;
 					width:100%;
-					height:50%;
+					height:60%;
 					.map{
+						border-radius: 5px;
+						margin-top: 6px;
+						margin-right: 5px;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						border: solid black 2px;
-						box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+						//box-shadow: 2px 2px 2px rgba(36, 36, 36, 0.57);
+						box-sizing: border-box;
+						height:98%;
+						width: 98%;
 					}
 				}
 
 			}
 		}
 		.bottomContent{
-			height:30px;
+			height:1%;
 			width: 100%;
-
 		}
 	}
+
+
+	.prePanel{
+		border-radius: 5px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		position: absolute;
+		display: flex;
+		border: black solid 2px;
+		background: #ee443c;
+	}
+
+	.panel{
+		border-radius: 5px;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		background: #f9e02e;
+		border: black solid 2px;
+
+	}
+
+	#prePanel-Nav{
+		top: 515px;
+		left: -10px;
+		align-items: center;
+		display: flex;
+		width: 100%;
+		height: 50px;
+		z-index: 2;
+		box-sizing: border-box;
+	}
+
+	#panel-Nav{
+		top: 508px;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		background: #f9e02e;
+		font-family: SourceSansPro-Regular;
+		font-weight: bold;
+		text-transform:uppercase;
+		font-size: 24px;
+		height: 50px;
+		z-index: 2;
+		box-sizing: border-box;
+		font-family: SourceSansPro-Regular;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 24px;
+
+		.navBtns{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+			}
+		.navBtns:hover{
+			cursor: pointer;
+			color: #ee443c;
+		}
+			#homeLink{
+				//padding-left: 40px;
+			}
+		.spacer{
+			font-size: 10px;
+			font-weight: normal;
+		}
+		/*
+		#social{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			height: 35px;
+			width: 205px;
+			right:30px;
+			font-size: 45px;
+			div{
+				padding:0;
+			}
+			div:hover{
+				cursor: pointer;
+				color: #ee443c;
+			}
+		}
+		*/
+	}
+
+
+	#prePanel-Hours{
+		height: 124px;
+		width: 129px;
+		left: 859px;
+		top: 437px;
+	}
+
+	#panel-Hours{
+		height: 124px;
+		width: 129px;
+		right: -149px;
+		top: 430px;
+		font-size: 22px;
+		text-align: center;
+		font-weight: bold;
+		font-family: SourceSansPro-Regular;
+		p{
+			color: #f9e02e;
+   text-shadow:
+       2px 2px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+			 padding: 0;
+			 margin: 0;
+		}
+
+		ul{
+			list-style-type: none;
+			padding-left: 7px;
+			color: black;
+			font-weight: bold;
+			font-size: 16px;
+			font-family: SourceSansPro-Regular;
+			text-align: left;
+			text-decoration: none;
+			margin-top: 5px;
+		}
+		.hoursLi{
+			font-size: 30px;
+			text-align: left;
+
+		}
+		.hourTable{
+			display:flex;
+			height: 102px;
+			ul #days{
+				//padding-right: 50px;
+			}
+			#times{
+					text-align: right;
+			}
+		}
+	}
+
+	#prePanel-Location{
+		height: 92px;
+    width: 129px;
+    left: 859px;
+    top: 74px;
+	}
+
+	#panel-Location{
+		height: 92px;
+    width: 129px;
+    right: -149px;
+    top: 67px;
+    text-align: center;
+    font-weight: bold;
+
+		ul{
+			list-style-type: none;
+			padding-left: 0;
+			color: black;
+			font-weight: bold;
+			font-size: 13px;
+			font-family: SourceSansPro-Regular;
+			text-align: center;
+			padding-bottom: 10px;
+			margin-top: 0px;
+		}
+		.nameLi{
+			font-size: 22px;
+			padding-bottom: 4px;
+   		color: #f9e02e;
+   text-shadow:
+       2px 2px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+		}
+	}
+
+	#prePanel-Social{
+		height: 45px;
+		width: 131px;
+		left: 859px;
+		top: 11px;
+	}
+	#panel-Social{
+		height: 45px;
+    width: 131px;
+    left: 866px;
+    top: 4px;
+
+		#social{
+			display: flex;
+			align-items: center;
+			position: relative;
+			height: 100%;
+			width: 100%;
+			font-size: 31px;
+			div{
+				padding:0;
+			}
+	}
+
+
+	}
+	.awardArea{
+		transform: scale(0.75);
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		height: 369px;
+		width: 167px;
+		right: -157px;
+	  top: 135px;
+		.award{
+			width:160px;
+			height: 110px;
+			background-size: cover;
+			//margin-bottom: 20px;
+		}
+	}
+	#a2013{
+		background: url("../img/best2013sz.png") no-repeat;
+	}
+	#a2014{
+		background: url("../img/best2014sz.png") no-repeat;
+	}
+	#a2015{
+		background: url("../img/best2015sz.png") no-repeat;
+	}
+
+
 }
 
 @keyframes move-twink-back {
@@ -220,6 +415,33 @@ html{
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#0f204d url("../img/stars.png") repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url("../img/twinkling.png") repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
 
 @font-face {
     font-family: SourceSansPro-Regular;
