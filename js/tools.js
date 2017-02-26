@@ -10,7 +10,39 @@ $(function() {
 		window.location.href = "http://m.achillesofficial.com/";
 	}
 
-	$(".modal").css("transform","translateY(0px)");
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() {
+	  $('#slideshow > div:first')
+	    .fadeOut(1500)
+	    .next()
+	    .fadeIn(1500)
+	    .end()
+	    .appendTo('#slideshow');
+	},  5000);
+
+
+	$(".header").css("transform","translateY(0px)");
+
+	$("#panel-Content").css("transform","translateY(0px)");
+	$("#prePanel-Content").css("transform","translateY(0px)");
+
+	$("#panel-Nav").css("transform","translateY(0px)");
+	$("#prePanel-Nav").css("transform","translateY(0px)");
+
+	$("#panel-Hours").css("transform","translateY(0px)");
+	$("#prePanel-Hours").css("transform","translateY(0px)");
+
+	$("#panel-Location").css("transform","translateY(0px)");
+	$("#prePanel-Location").css("transform","translateY(0px)");
+
+	$("#panel-Social").css("transform","translateY(0px)");
+	$("#prePanel-Social").css("transform","translateY(0px)");
+
+	$("#panel-Social").css("transform","translateY(0px)");
+	$("#prePanel-Social").css("transform","translateY(0px)");
+
+	$(".award").css("transform","translateY(0px)");
 
 	$('.iconBox').click( function() {
 	var linkSelection= $(this).attr('class').split(' ')[1];

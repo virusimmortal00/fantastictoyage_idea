@@ -12,6 +12,8 @@ body{
 
 }
 
+
+
 .header{
 	//opacity: 0;
 	position: absolute;
@@ -25,6 +27,8 @@ body{
 	background-size: cover;
 	box-sizing: border-box;
 	z-index: 5;
+	transition: transform .55s ease;
+	transform: translateY(-3000px);
 }
 .wrapper{
 	position: relative;
@@ -40,11 +44,17 @@ body{
 		position: relative;
 		width: 100%;
 		height: 500px;
+		transition: transform .35s ease;
+		transform: translateX(-3000px);
 	}
 	#panel-Content{
 		position: relative;
 		height: 500px;
 		top: -511px;
+		transition: transform .35s ease;
+		transform: translateX(-3000px);
+
+
 		.topContent{
 			display: flex;
 			position: relative;
@@ -62,6 +72,47 @@ body{
 					justify-content: center;
 					width:100%;
 					height:101%;
+
+					#slideshow {
+							position: relative;
+							width: 97%;
+							height: 97%;
+							border-radius: 5px;
+							border: 2px solid black;
+							box-sizing: border-box;
+							div {
+									position: absolute;
+									height: 100%;
+									width: 100%;
+							}
+
+							#slide1{
+								background: url("../img/slides/toys1.jpg");
+							}
+							#slide2{
+								background: url("../img/slides/toys2.jpg");
+							}
+							#slide3{
+								background: url("../img/slides/toys3.jpg");
+							}
+							#slide4{
+								background: url("../img/slides/toys4.jpg");
+							}
+							#slide5{
+								background: url("../img/slides/toys5.jpg");
+							}
+
+					}
+					/*
+					#slideshow > div {
+							position: absolute;
+							top: 10px;
+							left: 10px;
+							right: 10px;
+							bottom: 10px;
+					}
+					*/
+
 					.leftContent-top-img{
 						width: 97%;
 						height: 97%;
@@ -197,6 +248,8 @@ body{
 		height: 50px;
 		z-index: 2;
 		box-sizing: border-box;
+		transition: transform .75s ease;
+		transform: translateY(3000px);
 	}
 
 	#panel-Nav{
@@ -216,6 +269,8 @@ body{
 		z-index: 2;
 		box-sizing: border-box;
 		font-size: 24px;
+		transition: transform .75s ease;
+		transform: translateY(3000px);
 
 		.navBtns{
 				padding-left: 30px;
@@ -242,6 +297,9 @@ body{
 		width: 129px;
 		left: 859px;
 		top: 437px;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
 	}
 
 	#panel-Hours{
@@ -253,6 +311,10 @@ body{
 		text-align: center;
 		font-weight: bold;
 		font-family: SourceSansPro-Regular;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
+
 		p{
 			color: #f9e02e;
 			font-family: flashrogers;
@@ -299,6 +361,9 @@ body{
     width: 129px;
     left: 859px;
     top: 74px;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
 	}
 
 	#panel-Location{
@@ -308,6 +373,9 @@ body{
     top: 67px;
     text-align: center;
     font-weight: bold;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
 
 		ul{
 			list-style-type: none;
@@ -339,6 +407,9 @@ body{
 		width: 131px;
 		left: 859px;
 		top: 11px;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
 	}
 	#panel-Social{
 		height: 45px;
@@ -346,6 +417,9 @@ body{
     left: 866px;
     top: 4px;
 		z-index: 6;
+
+		transition: transform .75s ease;
+		transform: translateX(3000px);
 
 	#social{
 		display: flex;
@@ -372,9 +446,11 @@ body{
 	}
 
 
+
+
 	}
 	.awardArea{
-		transform: scale(0.75);
+
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -382,11 +458,16 @@ body{
 		width: 167px;
 		right: -157px;
 	  top: 135px;
+		transform: scale(0.75);
+
+
 		.award{
 			width:160px;
 			height: 110px;
 			background-size: cover;
-			//margin-bottom: 20px;
+			transform: translateX(3000px);
+			transition: transform 1s ease;
+
 		}
 	}
 	#a2013{
