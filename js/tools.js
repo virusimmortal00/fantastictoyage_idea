@@ -1,5 +1,6 @@
 $(function() {
 
+/*
 	function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 	};
@@ -9,6 +10,7 @@ $(function() {
 	{
 		window.location.href = "http://m.achillesofficial.com/";
 	}
+*/
 
 	$("#slideshow > div:gt(0)").hide();
 
@@ -43,7 +45,7 @@ $(function() {
 	$("#prePanel-Social").css("transform","translateY(0px)");
 
 	$(".award").css("transform","translateY(0px)");
-
+/*
 	$('.iconBox').click( function() {
 	var linkSelection= $(this).attr('class').split(' ')[1];
 	if(linkSelection=="icon-soundcloud")
@@ -112,5 +114,6 @@ $(function() {
 				href: "img/img4.jpg"
 		});
 	});
+*/
 
 });
